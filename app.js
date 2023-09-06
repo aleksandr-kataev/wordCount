@@ -40,14 +40,8 @@ var args = process.argv;
 var readFile = function (filename) { return __awaiter(_this, void 0, void 0, function () {
     var path;
     return __generator(this, function (_a) {
-        try {
-            path = "./".concat(filename);
-            return [2 /*return*/, fs.readFile(path, { encoding: "utf8" })];
-        }
-        catch (err) {
-            console.log(err);
-        }
-        return [2 /*return*/];
+        path = "./".concat(filename);
+        return [2 /*return*/, fs.readFile(path, { encoding: "utf8" })];
     });
 }); };
 var countWords = function (filename) { return __awaiter(_this, void 0, void 0, function () {
