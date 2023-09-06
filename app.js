@@ -36,14 +36,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 var fs = require("fs/promises");
-var FILENAME = "input.txt";
+var args = process.argv;
 var readFile = function (filename) { return __awaiter(_this, void 0, void 0, function () {
-    var path, file;
+    var path;
     return __generator(this, function (_a) {
         try {
             path = "./".concat(filename);
-            file = fs.readFile(path, { encoding: "utf8" });
-            return [2 /*return*/, file];
+            return [2 /*return*/, fs.readFile(path, { encoding: "utf8" })];
         }
         catch (err) {
             console.log(err);
@@ -69,7 +68,7 @@ function main() {
         var wordCount;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, countWords(FILENAME)];
+                case 0: return [4 /*yield*/, countWords(args[2])];
                 case 1:
                     wordCount = _a.sent();
                     console.log(wordCount);
@@ -78,6 +77,4 @@ function main() {
         });
     });
 }
-if (require.main === module) {
-    main();
-}
+main();
